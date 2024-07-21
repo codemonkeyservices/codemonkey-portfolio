@@ -2,32 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.hero-bottom-wave {
+  mask-image: url('https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-hero.svg');
+  mask-position: bottom center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+.transition-custom {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.glass-morphism{
+  @apply isolate  rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5
 }
