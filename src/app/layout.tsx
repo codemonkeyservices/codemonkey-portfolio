@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Exo } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "./components/customCursor";
+import FloatingChatButton from "./components/floatingChatButton";
 
 const global_font = Exo({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={global_font.className}>
       <CustomCursor/>
         {children}
+        <FloatingChatButton/>
       </body>
     </html>
   );

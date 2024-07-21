@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="pt-4 flex gap-4 text-lg font-semibold">
             <button className="bg-sky-500 hover:bg-sky-400 p-3 rounded-md hover:rounded-none drop-shadow-2xl transition-custom">book a meeting</button>
             <button className="text-sky-300  py-3 hover:px-4 hover:bg-[#9191912f] transition-custom flex items-center gap-3">
-                <p>learn about codemonkey</p>
+                <p className="light-blue-text-gradient" >learn about codemonkey</p>
                 <FaArrowRight className="size-4" />
             </button>
           </div>

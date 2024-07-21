@@ -8,9 +8,8 @@
   }
 }
 
-
 .hero-bottom-wave {
-  mask-image: url('https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-hero.svg');
+  mask-image: url("https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-hero.svg");
   mask-position: bottom center;
   mask-size: cover;
   mask-repeat: no-repeat;
@@ -20,6 +19,44 @@
   @apply transition-all duration-300 ease-in-out;
 }
 
-.glass-morphism{
-  @apply isolate  rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5
+.glass-morphism {
+  @apply isolate  rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5;
 }
+
+.blue-gradient {
+  background: rgb(0,142,255);
+  background: linear-gradient(47deg, rgba(0,142,255,1) 0%, rgba(13,3,148,1) 0%, rgba(14,4,129,1) 50%, rgba(16,10,40,1) 100%);
+}
+
+.blue-text-gradient {
+  background: linear-gradient(47deg, rgba(0,142,255,1) 0%, rgba(13,3,148,1) 0%, rgba(14,4,129,1) 50%, rgba(16,10,40,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.light-blue-text-gradient {
+  background: linear-gradient(180deg, rgb(163, 215, 255) 0%, rgb(241, 240, 255) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+.breathing {
+  animation: breathing 3s infinite;
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
