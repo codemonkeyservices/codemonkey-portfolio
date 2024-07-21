@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen lg:h-[800px] min-[1600px]:h-screen">
+    <div className="relative w-full h-[800px] min-[1600px]:h-screen">
       <div className="hero-bottom-wave fill-transparent-to-white  absolute inset-0 w-full h-full bg-blue-600">
         <Image
           src="https://res.cloudinary.com/snyk/image/upload/v1719345707/website-heroes/background-images/hero-bg-planet.svg"
@@ -18,7 +18,7 @@ const Hero = () => {
           }}
         />
         <div className="h-full w-full absolute inset-0 flex justify-center">
-            <div className=" flex flex-col pt-20 items-center gap-4 text-center max-w-[1000px]">
+            <div className=" flex flex-col pt-20 items-center gap-4 text-center w-[80%] lg:max-w-[1000px]">
             <button className="group border-4 rounded-full border-gray-400 flex gap-3 px-6 py-2 items-center mb-4 text-white hover:border-cyan-300 hover:text-sky-500 transition-all duration-300 ease-in-out relative">
             <p className="text-pink-600 text-lg font-medium">New</p>
             <p className="font-bold text-lg">

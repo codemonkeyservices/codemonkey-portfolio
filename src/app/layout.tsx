@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Exo } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "./components/customCursor";
 
 const global_font = Exo({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={global_font.className}>{children}</body>
+      <body className={global_font.className}>
+      <CustomCursor/>
+        {children}
+      </body>
     </html>
   );
 }
