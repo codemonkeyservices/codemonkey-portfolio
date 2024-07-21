@@ -77,7 +77,7 @@ const CustomCursor: React.FC = () => {
       />
       <div
         ref={clickRef}
-        className={`${clicked ? "w-6 h-6 opacity-30" : "scale-100 opacity-100"} fixed pointer-events-none transition-transform duration-[40ms] z-50 rounded-full w-11 h-11  border-[3px] border-${cursorColor} ${isVisible ? '' : 'opacity-20 w-16 h-16'}`}
+        className={`${clicked ? "w-6 h-6 opacity-30" : "scale-100 opacity-100"} fixed pointer-events-none transition-transform duration-[40ms] z-50 rounded-full w-11 h-11  border-[3px] border-${cursorColor} border-pink-400 ${isVisible ? '' : 'opacity-20 w-16 h-16'}`}
       >
         {/* <div
           className={`w-8 h-8 ${clicked ? "scale-100 opacity-30" : "scale-0 opacity-0"} rounded-full bg-${cursorColor} ease-in transition-all duration-500`}
