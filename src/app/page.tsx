@@ -2,6 +2,7 @@ import Hero from "./hero";
 import OurClient from "./components/ourClients";
 import WhatWeDoSection from "./components/whatWeDoSection";
 import Services from "./components/services";
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <WhatWeDoSection/>
       <Services/>
       </div>
+      <Footer/>
       </div>
 
     </main> 
