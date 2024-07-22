@@ -9,6 +9,7 @@ import gmail from "@/../public/gmail_grey.png"
 const Footer = () => {
   return (
     <>
+    <footer className='w-full'>
   <div className='relative'>
       <Image
         src="https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-salmon-top.svg"
@@ -101,7 +102,7 @@ const Footer = () => {
         </div>
 </section>
 
-
+</footer>
         
     </>
   )
