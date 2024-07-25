@@ -61,3 +61,9 @@
     transform: scale(1);
   }
 }
+
+
+/* Footer CSS */
+.footer-dog{
+  width: calc(8.3333333333%* 12);
+}
