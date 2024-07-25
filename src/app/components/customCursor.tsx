@@ -73,7 +73,7 @@ const CustomCursor: React.FC = () => {
     <>
       <div
         ref={cursorRef}
-        className={`fixed pointer-events-none transition-transform duration-[30ms] z-50 rounded-full w-3 h-3 bg-${cursorColor} ${isVisible ? '' : ''}`}
+        className={`fixed pointer-events-none transition-transform duration-[30ms] z-50 rounded-full w-3 h-3 bg-${cursorColor} ${isVisible ? '' : 'opacity-0'}`}
       />
       <div
         ref={clickRef}

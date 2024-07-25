@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="relative w-full h-[800px] min-[1600px]:h-screen">
       <div className="hero-bottom-wave fill-transparent-to-white  absolute inset-0 w-full h-full bg-blue-600">
         <Image
-          src="https://res.cloudinary.com/snyk/image/upload/v1719345707/website-heroes/background-images/hero-bg-planet.svg"
+          src="/hero-bg-planet.svg"
           alt=""
           priority
           layout="fill" // Change `fill` to `layout="fill"`

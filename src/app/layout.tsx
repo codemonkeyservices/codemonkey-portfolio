@@ -19,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={global_font.className}>
-      <CustomCursor/>
-        {children}
-        <FloatingChatButton/>
+        <CustomCursor />
+        <main className="flex justify-center">
+          <div className="2xl:max-w-[1450px] flex flex-col items-center">
+            {children}
+          </div>
+        </main>
+        <FloatingChatButton />
       </body>
     </html>
   );

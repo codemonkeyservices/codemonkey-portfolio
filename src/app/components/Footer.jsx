@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className='w-full'>
   <div className='relative'>
       <Image
-        src="https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-salmon-top.svg"
+        src="/wave-mask-salmon-top.svg"
         alt=""
         width={500}
         height={500}
@@ -24,7 +24,7 @@ const Footer = () => {
         }}
       />
       <Image
-        src="https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-purple-top.svg"
+        src="/wave-mask-purple-top.svg"
         alt=""
         width={500}
         height={500}
@@ -37,7 +37,7 @@ const Footer = () => {
         }}
       />
       <Image
-        src="https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-space-top.svg"
+        src="/wave-mask-space-top.svg"
         alt=""
         width={500}
         height={500}
@@ -49,7 +49,7 @@ const Footer = () => {
       />
       <div className='w-full h-auto'>
       <Image
-        src="https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/backgrounds/wave-mask-space-top.svg"
+        src="/wave-mask-space-top.svg"
         alt=""
         width={1}
         height={1}
