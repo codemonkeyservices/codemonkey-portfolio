@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import { FaArrowRight } from "react-icons/fa";
 
-const integrations = [
-  { name: 'JavaScript', icon: '/path/to/javascript-icon.svg' },
-  { name: 'Java', icon: '/path/to/java-icon.svg' },
-  { name: 'Python', icon: '/path/to/python-icon.svg' },
-  // add other integrations here...
-];
+
 
 export default function TechStack() {
   return (
@@ -26,13 +21,55 @@ export default function TechStack() {
         </button>
         
       </div>
-      <div className="md:w-1/2 grid grid-cols-3 gap-4">
-        {integrations.map((integration) => (
-          <div key={integration.name} className="flex justify-center items-center p-4">
-            <Image src={integration.icon} alt={integration.name} width={64} height={64} />
+      <div className="px-6">
+      {groupedTechData.map((group, rowIndex) => (
+        <div key={rowIndex} className="flex justify-end items-center mb-4">
+          {group.map((tech) => (
+            <div key={tech.name} className="relative flex flex-col justify-center items-center p-4 group">
+            <span className="absolute top-0 left-0 right-0 mx-auto text-center text-black text-sm font-bold opacity-0 group-hover:opacity-100 transform group-hover:-translate-y-2 transition-all duration-300">{tech.name}</span>
+            <Image src={tech.icon} alt={tech.name} width={50} height={50} />
           </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ))}
+    </div>
     </div>
   );
 };
+
+
+
+
+const TechData = [
+    { name: 'type script', icon: '/tech/ts.png' },
+    { name: 'java script', icon: '/tech/js.png' },
+    { name: 'react',       icon: '/tech/react.png' },
+    { name: 'Next.js',     icon: '/tech/next.png' },
+    { name: 'flutters', icon: '/tech/flutter.png' },
+    { name: 'tailwind', icon: '/tech/tailwind.png' },
+    { name: 'aws', icon: '/tech/aws.png' },
+    { name: 'html', icon: '/tech/html.png' },
+    { name: 'css', icon: '/tech/css.png' },
+    { name: 'firebase', icon: '/tech/firebase.png' },
+    { name: 'sql', icon: '/tech/sql.png' },
+    { name: 'postgreSQL', icon: '/tech/postgreSQL.png' },
+    { name: 'MySql', icon: '/tech/mysql.png' },
+    { name: 'mongo', icon: '/tech/mongo.png' },
+    { name: 'vercel', icon: '/tech/vercel.png' },
+    { name: 'jenkins', icon: '/tech/jenkin.png' },
+    { name: 'docker', icon: '/tech/docker.png' },
+    { name: 'linux', icon: '/tech/linux.png' },
+    { name: 'python', icon: '/tech/python.png' },
+    { name: 'c', icon: '/tech/c.png' },
+    { name: 'c++', icon: '/tech/c++.png' },
+    { name: 'photoshop', icon: '/tech/photoshop.png' },
+    { name: 'illustrator', icon: '/tech/illustrator.png' }
+    
+  ];
+
+  const groupedTechData = [
+    TechData.slice(0, 8),
+    TechData.slice(8, 14),
+    TechData.slice(14, 19),
+    TechData.slice(19, 23)
+];
