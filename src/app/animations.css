@@ -1,0 +1,112 @@
+/* Define the bounce and pop animation */
+@keyframes bounce-pop {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-10px) scale(1.2);
+    }
+  }
+  
+  /* Define the ripple effect */
+  @keyframes ripple {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-5px) scale(1.1);
+    }
+  }
+  
+  /* Base style for each character */
+  .service-name .char {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  /* Apply the bounce and pop animation to the hovered character */
+  .service-name .char:hover {
+    animation: bounce-pop 1.2s ease;
+    z-index: 1;
+  }
+  
+  /* Apply the ripple effect to next siblings */
+  .service-name .char:hover ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  /* Apply the ripple effect to previous siblings */
+  .service-name .char {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-name .char:hover ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  /* Using :has() pseudo-class to target previous siblings - note this is not widely supported */
+  .service-name .char:hover,
+  .service-name .char:hover ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover + .char,
+  .service-name .char:hover ~ .char + .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char ~ .char ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  /* Apply ripple effect to previous siblings using JavaScript for wider browser support */
+  .service-name .char:hover {
+    animation: bounce-pop 1.2s ease;
+    z-index: 1;
+  }
+  
+  .service-name .char {
+    position: relative;
+    z-index: 0;
+  }
+  
+  .service-name .char:hover,
+  .service-name .char:hover ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover + .char,
+  .service-name .char:hover ~ .char + .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
+  .service-name .char:hover ~ .char ~ .char ~ .char ~ .char ~ .char {
+    animation: ripple 1.2s ease;
+  }
+  
