@@ -25,7 +25,11 @@ export default function Services() {
             <h1 className="service-name justify-start text-5xl font-extrabold w-full py-6">
               {d.service_name.split("").map((char, index) => (
                 <span key={index} className="char">
-                  {char}
+                  {char === " " ? (
+                    <span className="space-char">&nbsp;</span>
+                  ) : (
+                    char
+                  )}
                 </span>
               ))}
             </h1>
