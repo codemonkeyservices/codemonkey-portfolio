@@ -35,7 +35,7 @@ const CustomCursor: React.FC = () => {
       if (tagName === 'button') {
         setIsVisible(false); // Hide cursor when hovering over button
       }
-      else if (tagName === 'p' || tagName ==='img' ){
+      else if (tagName === 'p' || tagName ==='img' || tagName ==='span' ){
         setIsVisible(false);
       }
        else {
