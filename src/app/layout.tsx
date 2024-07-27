@@ -3,6 +3,7 @@ import { Exo } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "./components/customCursor";
 import FloatingChatButton from "./components/floatingChatButton";
+import Navbar from './components/Navbar'
 
 const global_font = Exo({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={global_font.className}>
+      <Navbar/>
         <CustomCursor />
         <main className="flex justify-center">
           <div className="2xl:max-w-[1450px] flex flex-col items-center">

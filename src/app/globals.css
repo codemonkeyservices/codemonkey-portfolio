@@ -126,3 +126,9 @@
 .service-name .char:hover ~ .char + .char ~ .char + .char ~ .char {
   animation: ripple 1s ease;
 }
+
+.navbar-morphism{
+  background: hsla(0, 0%, 100%, .7);
+  backdrop-filter: blur( 1.25rem );
+  -webkit-backdrop-filter: blur( 100px );
+}
