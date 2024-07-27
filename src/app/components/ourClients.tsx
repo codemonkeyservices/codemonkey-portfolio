@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function OurClient(){
     return(
-        <div className="w-full flex flex-col items-center justify-center p-4 mt-8 gap-6">
+        <section className="w-full flex flex-col items-center justify-center p-4 mt-8 gap-6">
             <p className="text-2xl font-semibold">Clients using our software solutions</p>
             <div className="flex  gap-5">
                 {
@@ -14,7 +14,7 @@ export default function OurClient(){
                 }
 
             </div>
-        </div>
+        </section>
     )
 }
 

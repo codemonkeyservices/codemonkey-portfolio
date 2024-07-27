@@ -1,0 +1,17 @@
+  
+  .react-datepicker__header {
+    background-color: #3251b8;
+    color: white;
+    border-bottom: 1px solid #333;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #4a4a4a;
+    color: white;
+  }
+  
+  .react-datepicker__day--highlighted {
+    background-color: #4a4a4a;
+    color: white;
+  }
+  

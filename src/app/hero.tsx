@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
+import BookButton from "./components/bookButton";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[800px] min-[1600px]:h-screen">
+    <section className="relative w-full h-[800px] min-[1600px]:h-screen">
       <div className="hero-bottom-wave fill-transparent-to-white  absolute inset-0 w-full h-full bg-blue-600">
         <Image
           src="/hero-bg-planet.svg"
@@ -33,7 +34,7 @@ const Hero = () => {
           </p>
           <p className="font-medium text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, veniam omnis facilis pariatur explicabo eaque perspiciatis voluptates. Nostrum aliquid molestias sapiente voluptatem saepe deleniti, necessitatibus adipisci </p>
           <div className="pt-4 flex gap-4 text-lg font-semibold">
-            <button className="bg-sky-500 hover:bg-sky-400 p-3 rounded-md hover:rounded-none drop-shadow-2xl transition-custom">book a meeting</button>
+            <BookButton/>
             <button className="text-sky-300  py-3 hover:px-4 hover:bg-[#9191912f] transition-custom flex items-center gap-3">
                 <p className="light-blue-text-gradient" >learn about codemonkey</p>
                 <FaArrowRight className="size-4" />
@@ -43,7 +44,7 @@ const Hero = () => {
           
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

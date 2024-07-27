@@ -4,7 +4,7 @@ import Counter from "./counter";
 
 export default function WhatWeDoSection() {
   return (
-    <div className="w-full bg-gray-50 flex flex-col item-center text-center p-6 px-10">
+    <section className="w-full bg-gray-50 flex flex-col item-center text-center p-6 px-10">
       <p
         className={`${localfont.className}  p-4 text-lg text-sky-600 font-bold`}
       >
@@ -31,7 +31,7 @@ export default function WhatWeDoSection() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

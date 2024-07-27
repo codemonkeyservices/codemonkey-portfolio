@@ -3,7 +3,7 @@ import ArrowButton from "./arrowButton";
 
 export default function Services() {
   return (
-    <div>
+    <section>
       {serviceData.map((d, index) => (
         <div
           key={index}
@@ -39,7 +39,7 @@ export default function Services() {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 

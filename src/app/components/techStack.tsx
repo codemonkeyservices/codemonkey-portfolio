@@ -2,10 +2,9 @@ import Image from 'next/image';
 import { FaArrowRight } from "react-icons/fa";
 
 
-
 export default function TechStack() {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start px-8 py-16">
+    <section className="flex flex-col md:flex-row items-center md:items-start px-8 py-16">
       <div className="md:w-1/2 mb-8 md:mb-0">
         <h2 className="text-6xl font-bold mb-4 leading-tight">
           Build with the best Tech available
@@ -25,15 +24,15 @@ export default function TechStack() {
       {groupedTechData.map((group, rowIndex) => (
         <div key={rowIndex} className="flex justify-end items-center mb-4">
           {group.map((tech) => (
-            <div key={tech.name} className="relative flex flex-col justify-center items-center p-4 group">
+            <button key={tech.name} className="relative flex flex-col justify-center items-center p-4 group">
             <span className="absolute top-0 left-0 right-0 mx-auto text-center text-black text-sm font-bold opacity-0 group-hover:opacity-100 transform group-hover:-translate-y-2 transition-all duration-300">{tech.name}</span>
             <Image src={tech.icon} alt={tech.name} width={50} height={50} />
-          </div>
+          </button>
           ))}
         </div>
       ))}
     </div>
-    </div>
+    </section>
   );
 };
 
