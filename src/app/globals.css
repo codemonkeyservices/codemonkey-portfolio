@@ -140,7 +140,7 @@
 
 .navbar-morphism{
   background: hsla(0, 0%, 100%, .7);
-  backdrop-filter: blur( 1.25rem );
-  -webkit-backdrop-filter: blur( 100px );
+  backdrop-filter: blur( 1rem );
+  -webkit-backdrop-filter: blur( 20px );
 }
 

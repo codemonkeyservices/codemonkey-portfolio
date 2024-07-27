@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={global_font.className}>
         <CustomCursor />
         <Navbar />
-        <main className="flex justify-center">
+        <main className="flex justify-center bg-white">
           <div className="2xl:max-w-[1450px] flex flex-col items-center">
             {children}
           </div>

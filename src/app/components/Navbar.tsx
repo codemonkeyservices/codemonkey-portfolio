@@ -8,8 +8,8 @@ import { TbPuzzle } from "react-icons/tb";
 
 const Navbar = () => {
   return (
-    <div className='sticky top-0 z-[100]'>
-    <div className='2xl:max-w-[1450px] mx-auto navbar-morphism z-[100] sticky top-0'>
+    <div className='sticky top-0 z-[100] mx-auto  navbar-morphism'>
+    <div className='2xl:max-w-[1430px] mx-auto'>
     <nav className='w-full flex justify-between py-2'>
             <Link className="mr-2 relative flex items-center" href="/">
                 {/* <div className='w-auto h-12 p-2 mt-2 items-center hover:scale-110 transition-all duration-500 cursor-pointer'>
