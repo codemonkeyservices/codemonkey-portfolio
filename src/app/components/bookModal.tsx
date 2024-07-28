@@ -282,7 +282,11 @@ const Modal = () => {
 
   // Handle click to generate mailto URL and navigate
   const handleSendMail = () => {
-    const mailtoUrl = `mailto:services@codemonkey.co.in?subject=Meeting Request&body=Hey team Codemonkey,%0A%0Asome content to ask for a meeting%0A%0AName: ${encodeURIComponent(name)}%0ACountry: ${encodeURIComponent(country)}%0APhone: ${encodeURIComponent(phone)}%0ABudget: ${encodeURIComponent(budget)}`;
+    const validName = name || '' 
+    const validCountry = country || '' 
+    const validPhone = phone || '' 
+    const validbudget = budget || '' 
+    const mailtoUrl = `mailto:services@codemonkey.co.in?subject=Meeting Request&body=Hey team Codemonkey,%0A%0Asome content to ask for a meeting%0A%0AName: ${encodeURIComponent(validName)}%0ACountry: ${encodeURIComponent(validCountry)}%0APhone: ${encodeURIComponent(validPhone)}%0ABudget: ${encodeURIComponent(validbudget)}`;
 
     window.location.href = mailtoUrl; //Opens the default email client
     

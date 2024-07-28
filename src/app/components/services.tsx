@@ -44,7 +44,7 @@ export default function Services() {
             </header>
 
             <figcaption className="text-lg font-normal pr-6">{d.service_description}</figcaption>
-            <ArrowButton name={d.service_button_name} />
+            <ArrowButton name={d.service_button_name} url={d.service_link} />
           </article>
         </figure>
       ))}
@@ -60,6 +60,7 @@ const serviceData = [
     service_description:
       "We develop all kinds of websites and web apps, including complex features like e-commerce, interactive graphs, chat systems, and more.",
     service_button_name: "learn more about our web development",
+    service_link: "/web-development",
   },
   {
     service_name: "App Devopelopment",
@@ -68,6 +69,7 @@ const serviceData = [
     service_description:
       "We create a wide range of mobile applications for both Android and iOS, incorporating advanced features such as e-commerce, interactive graphs, chat systems, and more.",
     service_button_name: "learn more about our App development",
+    service_link: "/app-development",
   },
   {
     service_name: "Automation",
@@ -76,5 +78,6 @@ const serviceData = [
     service_description:
       "We can automate your manual processes using Python, delivering efficient solutions to streamline your operations and increase productivity.",
     service_button_name: "learn more about Automation",
+    service_link: "/automation",
   },
 ];
