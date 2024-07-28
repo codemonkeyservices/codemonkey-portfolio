@@ -10,17 +10,17 @@ const Navbar = () => {
 
   return (
     <div className='sticky top-0 z-[100] navbar-morphism'>
-    <div className='2xl:max-w-[1430px] mx-auto px-2'>
-    <nav className='w-full flex justify-between py-2'>
-            <Link className="mr-2 relative flex items-center" href="/">
-                <div className='w-auto h-16 p-2 mt-2 items-center hover:scale-110 transition-all duration-500 cursor-pointer'>
+    <div className='2xl:max-w-[1490px] mx-auto px-2'>
+    <nav className='w-full flex justify-between'>
+            <Link className="mr-2 relative flex items-center hover:scale-105 transition-all duration-1000" href="/">
+                <figure className='w-auto h-14 pr-1 items-center cursor-pointer'>
                     <Image src="/LogoColor.png" 
                     alt='logo' 
                     width={300} height={300} 
                     className="object-cover w-full h-full"
                     />
-                </div>
-                <p className='text-lg sm:text-2xl font-extrabold'>CodeMonkey</p>
+                </figure>
+                <p className='text-lg sm:text-xl font-extrabold pt-2'>CodeMonkey</p>
             </Link>
             <div className='flex'>
                 {/* <button aria-label="About Us"  onClick={(e) => handleScroll(e, 'whatwedo')} className='hidden md:flex my-auto text-mg font-semibold  items-center px-5 py-2 hover:bg-cyan-100 hover:cursor-pointer hover:rounded-md hover:text-blue-800'>

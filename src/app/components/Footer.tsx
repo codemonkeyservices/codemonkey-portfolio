@@ -117,11 +117,11 @@ const Footer = () => {
               <div>
                 <div className="w-40 h-40 p-4 mb-1">
                   <Image
-                    src="/logo.png"
+                    src="/LogoColor.png"
                     alt="codemonkey logo"
                     width={200}
                     height={200}
-                    className="object-contain w-full h-full invert opacity-25 hover:scale-110 transition-all duration-500"
+                    className="object-contain w-full h-full  hover:scale-110 transition-all duration-500"
                   />
                 </div>
               </div>
