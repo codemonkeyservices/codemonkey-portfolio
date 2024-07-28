@@ -54,7 +54,7 @@ export default function Services() {
 
 const serviceData = [
   {
-    service_name: "Web Devopelopment",
+    service_name: "Web Development",
     service_img: "/webdev.svg",
     service_img_fit: "cover",
     service_description:
@@ -63,7 +63,7 @@ const serviceData = [
     service_link: "/web-development",
   },
   {
-    service_name: "App Devopelopment",
+    service_name: "App Development",
     service_img: "/app_development.png",
     service_img_fit: "contain",
     service_description:

@@ -303,17 +303,17 @@ const Modal = () => {
 
   return (
       <div className="w-full h-auto flex items-center justify-center py-6 mt-10 mx-auto">
-        <div className="h-[100%] w-[85%] lg:w-[60%] bg-white rounded-lg flex flex-col p-6 text-lg relative">
-          <p className="font-bold text-2xl mb-6 text-center">
+        <div className="h-[100%] w-[85%] lg:w-[60%] bg-slate-50 drop-shadow-md rounded-lg flex flex-col p-6 text-lg relative">
+          <p className="font-bold text-4xl mb-16 text-center">
             Book a meeting with us in few clicks
           </p>
-          <form className="flex flex-col space-y-6">
+          <form className="flex flex-col font-semibold space-y-6">
             <div className="flex flex-col lg:flex-row lg:space-x-4 md:space-x-0">
               <label className="flex flex-col flex-1 text-gray-700 text-start">
                 <p className="px-2">Name:</p>
                 <input
                   type="text"
-                  className="border border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
+                  className="border border-gray-300 font-normal p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
                   placeholder="Enter your name"
                   required 
                   onChange={(e) => setName(e.target.value)}
@@ -323,7 +323,7 @@ const Modal = () => {
                 <p className="px-2">Phone Number:</p>
                 <input
                   type="tel"
-                  className="border border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
+                  className="border font-normal border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
                   placeholder="Enter your phone number"
                   required
                   onChange={(e) => setPhone(e.target.value)}
@@ -335,7 +335,7 @@ const Modal = () => {
                 <p className="px-2">Country:</p>
                 <Select
                   options={countryOptions}
-                  className="mt-1"
+                  className="mt-1 font-normal"
                   styles={customSelectStyles}
                   placeholder="Select your country"
                   required
@@ -347,7 +347,7 @@ const Modal = () => {
                 <DatePicker
                   selected={startDate}
                   onChange={(date: Date | null) => setStartDate(date)}
-                  className="border border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500 custom-datepicker"
+                  className="border font-normal border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500 custom-datepicker"
                   dateFormat="dd-MM-yyyy" // Display format for calendar interaction
                   minDate={today} // Disable dates before today
                   required
@@ -357,7 +357,7 @@ const Modal = () => {
                   customInput={
                     <input
                       type="text"
-                      className="border border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
+                      className="border font-normal border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
                       value={formatDate(startDate)}
                       readOnly
                       onChange={(e) => setDate(e.target.value)}
@@ -368,21 +368,21 @@ const Modal = () => {
               <label className="flex flex-col text-gray-700 w-full text-start">
                 <p className="px-2">What is your budget?</p>
                 <select
-                  className="border border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
+                  className="border font-normal border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
                   required
                   onChange={(e) => setBudget(e.target.value)}
                 >
                   <option className="font-semibold" value="1000-5000">
-                    {"1,000$ - 5,000$"}
+                    {"$1,000 - $5,000"}
                   </option>
                   <option className="font-semibold" value="5000-10000">
-                    {"5,000$ - 10,000$"}
+                    {"$5,000 - $10,000"}
                   </option>
                   <option className="font-semibold" value="5000-10000">
-                    {"10,000$ - 15,000$"}
+                    {"$10,000 - $15,000"}
                   </option>
                   <option className="font-semibold" value="10000+">
-                    {"15000$ +"}
+                    {"$15000 +"}
                   </option>
                 </select>
               </label>
@@ -390,7 +390,7 @@ const Modal = () => {
             <label className="flex flex-col text-gray-700 text-start">
               <p className="px-2">What do you want to discuss?</p>
               <textarea
-                className="border border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
+                className="border font-normal border-gray-300 p-3 rounded-lg mt-1 focus:outline-none focus:border-indigo-500"
                 placeholder="Enter details"
                 rows={4}
                 required
@@ -427,15 +427,6 @@ const Modal = () => {
               </button>
             </div>
           </div>
-          <div className="block lg:hidden mt-5">
-              <Link href="/">
-              <button
-                className="border-2 border-black rounded-lg w-32 py-2 hover:bg-gray-200 transition-all"
-                >
-                Back
-              </button>
-              </Link>
-            </div>
         </div>
       </div>
   );

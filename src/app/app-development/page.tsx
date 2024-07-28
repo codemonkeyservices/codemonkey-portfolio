@@ -63,9 +63,23 @@ export default function AppDevelopment() {
 
 const serviceData = [
   {
+    service_name: "Android Development",
+    service_img: "/webdevelopment/android.svg",
+    service_img_fit: "cover",
+    service_description:
+      "We build cutting-edge Android applications tailored to client needs, enhancing user experience and driving business growth.",
+  },
+  {
+    service_name: "iOS Development",
+    service_img: "/webdevelopment/IOS.png",
+    service_img_fit: "cover",
+    service_description:
+      "We develop high-quality iOS applications that enhance user engagement and support business objectives, ensuring a seamless experience for clients.",
+  },
+  {
     service_name: "E-Commerce Platform",
     service_img: "/webdevelopment/ecommerce.svg",
-    service_img_fit: "contain",
+    service_img_fit: "cover",
     service_description:
       "We build robust e-commerce platforms that drive sales and enhance user experience, helping clients boost their online business.",
   },
@@ -82,20 +96,6 @@ const serviceData = [
     service_img_fit: "cover",
     service_description:
       "We design intuitive and engaging user interfaces that improve customer satisfaction and retention, transforming client visions into reality.",
-  },
-  {
-    service_name: "Dashboard",
-    service_img: "/webdevelopment/dashboard.svg",
-    service_img_fit: "cover",
-    service_description:
-      "We create comprehensive dashboards that provide real-time insights, helping clients make informed decisions and streamline operations.",
-  },
-  {
-    service_name: "SEO",
-    service_img: "/webdevelopment/SEO.svg",
-    service_img_fit: "cover",
-    service_description:
-      "We implement effective SEO strategies that increase visibility and drive organic traffic, significantly improving clients' online presence.",
   },
   {
     service_name: "Chat System",
