@@ -4,6 +4,8 @@ import "./globals.css";
 import CustomCursor from "./components/customCursor";
 import FloatingChatButton from "./components/floatingChatButton";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 
 const global_font = Exo({ subsets: ["latin"] });
 
@@ -25,7 +27,6 @@ export default function RootLayout({
         <meta name="keywords" content="CodeMonkey, tech startup, web development, web applications, mobile applications, Android, iOS, automation solutions" />
         <meta name="author" content="CodeMonkey" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-        <meta httpEquiv="refresh" content="30" />
       </head>
       <body className={global_font.className}>
         <CustomCursor />
@@ -33,6 +34,7 @@ export default function RootLayout({
         <main className="flex justify-center bg-white">
           <div className="2xl:max-w-[1450px] flex flex-col items-center">
             {children}
+              <Footer />
           </div>
         </main>
         <FloatingChatButton />

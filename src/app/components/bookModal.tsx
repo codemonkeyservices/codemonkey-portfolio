@@ -6,11 +6,8 @@ import { MdOutlineMailOutline, MdOutlineWhatsapp } from "react-icons/md";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "@/styles/calendar.css";
+import Link from "next/link";
 
-interface ModalProps {
-  isModalOpen: boolean;
-  setIsModalOpen: (open: boolean) => void;
-}
 
 
 const countries = [
@@ -244,7 +241,7 @@ const customSelectStyles = {
   }),
 };
 
-const Modal: FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
+const Modal = () => {
   // Set default date to today's date, formatted as dd-MM-yyyy
   const today = new Date();
   const [startDate, setStartDate] = useState<Date | null>(today);
@@ -271,7 +268,7 @@ const Modal: FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
   const [country, setCountry] = useState<string | null>(null);
   const [date, setDate] = useState<string | null>(null);
   const [phone, setPhone] = useState<string | null>(null);
-  const [budget, setBudget] = useState<string | null>(null);
+  const [budget, setBudget] = useState<string | null>("1000-5000");
   const [agenda, setAgenda] = useState<string | null>(null);
 
 
@@ -285,19 +282,24 @@ const Modal: FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
 
   // Handle click to generate mailto URL and navigate
   const handleSendMail = () => {
-    console.log("inside mail function")
-    console.log(name, country, phone, budget, date, agenda)
-    const mailtoUrl = `mailto:codemonkeyservices@gmail.com?subject=Meeting Request&body=Hey team Codemonkey,%0A%0Asome content to ask for a meeting%0A%0A%3Cdetails%3E%0A%0Aname%3A%20${encodeURIComponent(name)}%0Acountry%3A%20${encodeURIComponent(country)}%0Aphone%3A%20${encodeURIComponent(phone)}%0Abudget%3A%20${encodeURIComponent(budget)}%0A%3C/details%3E`;
+    const mailtoUrl = `mailto:services@codemonkey.co.in?subject=Meeting Request&body=Hey team Codemonkey,%0A%0Asome content to ask for a meeting%0A%0AName: ${encodeURIComponent(name)}%0ACountry: ${encodeURIComponent(country)}%0APhone: ${encodeURIComponent(phone)}%0ABudget: ${encodeURIComponent(budget)}`;
 
     window.location.href = mailtoUrl; //Opens the default email client
     
   };
 
+  const handleSendWhatsapp = () => {
+    const message = `Hey team Codemonkey,\n\nsome content to ask for a meeting\n\nName: ${name}\nCountry: ${country}\nPhone: ${phone}\nBudget: ${budget}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=919518542917&text=${encodedMessage}`;
+
+    window.open(whatsappUrl, '_blank'); // Opens WhatsApp in a new tab
+  }
+
 
   return (
-    isModalOpen && (
-      <div className="fixed inset-0 flex items-center justify-center z-50 bg-[#30303048]">
-        <div className="h-[80%] w-[60%] bg-white rounded-lg drop-shadow-lg flex flex-col p-6 text-lg relative">
+      <div className="w-full h-auto flex items-center justify-center bg-[#d3d3d32a] py-6 mt-10">
+        <div className="h-[100%] w-[60%] bg-white rounded-lg drop-shadow-lg flex flex-col p-6 text-lg relative">
           <p className="font-bold text-2xl mb-6 text-center">
             Book a meeting with us in few clicks
           </p>
@@ -392,32 +394,37 @@ const Modal: FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
               />
             </label>
           </form>
-          <div className="absolute bottom-0 right-0 p-6 flex space-x-4 text-lg gap-2">
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="border-2 border-black rounded-lg w-32 py-2 hover:bg-gray-200 transition-all"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="border-2 border-black rounded-lg px-3 py-2 bg-green-600 text-white hover:bg-gray-800 transition-all flex gap-2"
-            >
-              <MdOutlineWhatsapp className="size-7" />
-              <p> Book via whatsapp</p>
-            </button>
-            <button
-              type="submit"
-              onClick={handleSendMail}
-              className="border-2 border-black rounded-lg px-3 py-2 bg-black text-white hover:bg-gray-800 transition-all flex gap-2"
-            >
-              <MdOutlineMailOutline className="size-7" />
-              <p> Book via e-mail</p>
-            </button>
+          <div className="p-6 flex space-x-4 text-lg gap-2 justify-between">
+            <div>
+              <Link href="/">
+              <button
+                className="border-2 border-black rounded-lg w-32 py-2 hover:bg-gray-200 transition-all"
+                >
+                Back
+              </button>
+              </Link>
+            </div>
+            <div className="flex">
+              <button
+                type="submit"
+                onClick={handleSendWhatsapp}
+                className="border-2 mr-2 border-black rounded-lg px-3 py-2 bg-green-600 text-white hover:bg-gray-800 transition-all flex gap-2"
+              >
+                <MdOutlineWhatsapp className="size-7" />
+                <p> Book via whatsapp</p>
+              </button>
+              <button
+                type="submit"
+                onClick={handleSendMail}
+                className="border-2 ml-2 border-black rounded-lg px-3 py-2 bg-black text-white hover:bg-gray-800 transition-all flex gap-2"
+              >
+                <MdOutlineMailOutline className="size-7" />
+                <p> Book via e-mail</p>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    )
   );
 };
 

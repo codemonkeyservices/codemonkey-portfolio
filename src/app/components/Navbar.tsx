@@ -36,7 +36,7 @@ const Navbar = () => {
                 <RiContactsBook2Line size={28} className='mr-1' /> <p>Contact Us</p>
                 </button> */}
 
-                <Link href="#" className='flex  sm:mx-3 my-auto text-mg font-semibold  items-center blue-button-gradient text-white px-2 sm:px-6  py-1 sm:py-3 rounded-md hover:bg-blue-800 cursor-pointer'>
+                <Link href="/book-a-call" className='flex  sm:mx-3 my-auto text-mg font-semibold  items-center blue-button-gradient text-white px-2 sm:px-6  py-1 sm:py-3 rounded-md hover:bg-blue-800 cursor-pointer'>
                     Book a call
                 </Link>
             </div>
