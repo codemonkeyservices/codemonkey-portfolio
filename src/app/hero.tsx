@@ -30,21 +30,23 @@ const Hero = () => {
                 <FaArrowRight className="size-4 md:size-5" />
               </div>
             </button>
-            <p className="text-3xl md:text-6xl font-extrabold text-yellow-300 leading-tight">
+            <header>
+            <h1 className="text-3xl md:text-6xl font-extrabold text-yellow-300 leading-tight" aria-label="codemonkey tagline">
               Turning Your Vision into a Stunning Online Reality
-            </p>
-            <p className="text-sm md:text-base font-medium text-white">
+            </h1>
+            <h2 className="text-sm md:text-base font-medium text-white" aria-label="company discription">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
               veniam omnis facilis pariatur explicabo eaque perspiciatis
               voluptates. Nostrum aliquid molestias sapiente voluptatem saepe
               deleniti, necessitatibus adipisci{" "}
-            </p>
+            </h2>
+            </header>
             <div className="pt-4 flex flex-col md:flex-row gap-4 text-lg font-semibold">
               <BookButton />
               <button 
               aria-label="learn about codemonkey"
               className="text-sky-300  py-3 hover:px-4 hover:bg-[#9191912f] transition-custom flex items-center gap-3">
-                <p className="light-blue-text-gradient" aria-expanded>
+                <p className="light-blue-text-gradient">
                   learn about codemonkey
                 </p>
                 <FaArrowRight className="size-4" />

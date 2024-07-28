@@ -3,43 +3,50 @@ import ArrowButton from "./arrowButton";
 
 export default function Services() {
   return (
-    <section id="services">
+    <section id="services" aria-label="what services we provide at codemonkey section">
       {serviceData.map((d, index) => (
-        <div
+        <figure
           key={index}
           className={`flex gap-8 lg:gap-4 items-center flex-col lg:flex-row justify-between ${
             index % 2 !== 0 ? "lg:flex-row-reverse" : ""
           }`}
+
+          aria-label={`about ${d.service_name} service`}
         >
-          <div className="h-auto lg:h-[530px] w-[80%] lg:w-[630px]">
+          <figure className="h-auto lg:h-[530px] w-[80%] lg:w-[630px]">
             <Image
               src={d.service_img}
               alt={d.service_name}
               width={400}
               height={400}
               className={`object-${d.service_img_fit} w-full h-full`}
+              aria-label={`${d.service_name} illustration image`}
             />
-          </div>
+          </figure>
 
-          <div className="w-full md:w-[70%] lg:w-[50%] md:px-6 text-center md:text-start">
-            <h1 className="hidden xl:block service-name justify-start text-5xl font-extrabold w-full py-6 ">
-              {d.service_name.split("").map((char, index) => (
-                <span key={index} className="char">
-                  {char === " " ? (
-                    <span className="space-char hidden xl:block">&nbsp;</span>
-                  ) : (
-                    char
-                  )}
-                </span>
-              ))}
-            </h1>
+          <article className="w-full md:w-[70%] lg:w-[50%] md:px-6 text-center md:text-start" aria-label={`${d.service_name} service discription`}>
+            <header>
+              <h1 className="hidden xl:block service-name justify-start text-5xl font-extrabold w-full py-6 ">
+                {d.service_name.split("").map((char, index) => (
+                  <span key={index} className="char">
+                    {char === " " ? (
+                      <span className="space-char hidden xl:block">&nbsp;</span>
+                    ) : (
+                      char
+                    )}
+                  </span>
+                ))}
+              </h1>
 
-            <h1 className="block xl:hidden text-3xl md:text-5xl font-extrabold break-words py-6">{d.service_name}</h1>
+              <h1 className="block xl:hidden text-3xl md:text-5xl font-extrabold break-words py-6">
+                {d.service_name}
+              </h1>
+            </header>
 
-            <p className="text-lg font-normal pr-6">{d.service_description}</p>
+            <figcaption className="text-lg font-normal pr-6">{d.service_description}</figcaption>
             <ArrowButton name={d.service_button_name} />
-          </div>
-        </div>
+          </article>
+        </figure>
       ))}
     </section>
   );
@@ -48,7 +55,7 @@ export default function Services() {
 const serviceData = [
   {
     service_name: "Web Devopelopment",
-    service_img: "/webdev1.svg",
+    service_img: "/webdev.svg",
     service_img_fit: "cover",
     service_description:
       "We develop all kinds of websites and web apps, including complex features like e-commerce, interactive graphs, chat systems, and more.",

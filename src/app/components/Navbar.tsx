@@ -20,7 +20,7 @@ const Navbar = () => {
                     className="object-cover w-full h-full"
                     />
                 </div>
-                <p className='text-lg sm:text-2xl font-extrabold '>CodeMonkey</p>
+                <p className='text-lg sm:text-2xl font-extrabold'>CodeMonkey</p>
             </Link>
             <div className='flex'>
                 {/* <button aria-label="About Us"  onClick={(e) => handleScroll(e, 'whatwedo')} className='hidden md:flex my-auto text-mg font-semibold  items-center px-5 py-2 hover:bg-cyan-100 hover:cursor-pointer hover:rounded-md hover:text-blue-800'>
