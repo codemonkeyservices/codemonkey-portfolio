@@ -112,31 +112,14 @@
 /* Apply the bounce animation to the hovered character */
 .service-name .char:hover {
   animation: bounce 1s ease;
-  scale: 1.12;
+  transform: scale(1.12);
 }
 
 /* Apply the ripple effect to adjacent characters */
-.service-name .char:hover ~ .char,
-.service-name .char:hover + .char ~ .char {
-  animation: ripple 1s ease;
+.service-name .char:hover ~ .char {
+  animation: ripple 1.2s ease;
 }
 
-/* Apply the ripple effect to previous characters */
-.service-name .char:hover {
-  animation: bounce 1s ease;
-}
-.service-name .char:hover ~ .char,
-.service-name .char:hover + .char ~ .char {
-  animation: ripple 1s ease;
-}
-.service-name .char:hover ~ .char + .char,
-.service-name .char:hover ~ .char + .char ~ .char {
-  animation: ripple 1s ease;
-}
-.service-name .char:hover ~ .char + .char ~ .char + .char,
-.service-name .char:hover ~ .char + .char ~ .char + .char ~ .char {
-  animation: ripple 1s ease;
-}
 
 .navbar-morphism{
   background: hsla(0, 0%, 100%, .7);

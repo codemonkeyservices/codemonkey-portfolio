@@ -215,7 +215,7 @@ const countries = [
   const countryOptions = countries.map((country) => ({
     value: country.name,
     label: (
-      <div className="flex items-center">
+      <div className="flex items-center" key={country.code}>
         <CountryFlag
           countryCode={country.code}
           svg

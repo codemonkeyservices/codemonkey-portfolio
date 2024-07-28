@@ -10,7 +10,7 @@ interface CounterProps {
 const Counter: React.FC<CounterProps> = ({ start, end }) => {
     return (
         <CountUp
-            className="text-8xl font-bold blue-text-gradient"
+            className="text-3xl md:text-6xl lg:text-8xl font-bold blue-text-gradient"
             start={start}
             end={end}
             duration={1}

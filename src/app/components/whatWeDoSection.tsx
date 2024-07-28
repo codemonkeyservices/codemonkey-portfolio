@@ -4,14 +4,14 @@ import Counter from "./counter";
 
 export default function WhatWeDoSection() {
   return (
-    <section className="w-full bg-gray-50 flex flex-col item-center text-center p-6 px-10">
+    <section className="w-full bg-gray-50 flex flex-col item-center text-center p-2 md:p-6 lg:px-10" id="whatwedo">
       <p
         className={`${localfont.className}  p-4 text-lg text-sky-600 font-bold`}
       >
         WHAT IS CODEMONKEY
       </p>
       {/* <p className="text-4xl font-extrabold p-4">We Can Develop All your Go Digital Goals</p> */}
-      <p className="text-lg px-10 font-medium">
+      <p className="text-base md:text-lg py-2 lg:p-10 font-medium" aria-readonly>
         We’re a dynamic startup dedicated to delivering comprehensive software
         solutions tailored to your needs. Whether you're a startup or an
         established business, we collaborate closely with you to provide a
@@ -23,11 +23,11 @@ export default function WhatWeDoSection() {
         curve.
       </p>
 
-      <div className="flex justify-between p-10 px-20">
+      <div className="flex justify-between items-start p-4 lg:-10 lg:px-20">
         {counterData.map((d, index) => (
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center w-[32%]" key={index}>
             <Counter start={d.startCount} end={d.count} />
-            <p className="text-2xl font-bold">{d.title}</p>
+            <p className="text-sm md:text-lg lg:text-2xl font-bold">{d.title}</p>
           </div>
         ))}
       </div>
@@ -47,7 +47,7 @@ const counterData = [
     startCount: 40
   },
   {
-    title: "YEARS OF EXPERINCE",
+    title: "YEARS",
     count: 5,
     startCount: 2
   },

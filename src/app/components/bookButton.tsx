@@ -10,7 +10,7 @@ export default function BookButton(){
         <button 
         onClick={()=>{setIsModalOpen(true)}}
         className="bg-sky-500 hover:bg-sky-400 p-3 rounded-md hover:rounded-none drop-shadow-2xl transition-custom">book a meeting</button>
-        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        {/* <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
 
         </>
     )

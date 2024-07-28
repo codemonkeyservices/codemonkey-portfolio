@@ -3,36 +3,38 @@ import ArrowButton from "./arrowButton";
 
 export default function Services() {
   return (
-    <section>
+    <section id="services">
       {serviceData.map((d, index) => (
         <div
           key={index}
-          className={`flex gap-4 items-center justify-between ${
-            index % 2 !== 0 ? "flex-row-reverse" : ""
+          className={`flex gap-8 lg:gap-4 items-center flex-col lg:flex-row justify-between ${
+            index % 2 !== 0 ? "lg:flex-row-reverse" : ""
           }`}
         >
-          <div className="h-[530px] w-[630px]">
+          <div className="h-auto lg:h-[530px] w-[80%] lg:w-[630px]">
             <Image
               src={d.service_img}
               alt={d.service_name}
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               className={`object-${d.service_img_fit} w-full h-full`}
             />
           </div>
 
-          <div className="w-[50%] px-6">
-            <h1 className="service-name justify-start text-5xl font-extrabold w-full py-6">
+          <div className="w-full md:w-[70%] lg:w-[50%] md:px-6 text-center md:text-start">
+            <h1 className="hidden xl:block service-name justify-start text-5xl font-extrabold w-full py-6 ">
               {d.service_name.split("").map((char, index) => (
                 <span key={index} className="char">
                   {char === " " ? (
-                    <span className="space-char">&nbsp;</span>
+                    <span className="space-char hidden xl:block">&nbsp;</span>
                   ) : (
                     char
                   )}
                 </span>
               ))}
             </h1>
+
+            <h1 className="block xl:hidden text-3xl md:text-5xl font-extrabold break-words py-6">{d.service_name}</h1>
 
             <p className="text-lg font-normal pr-6">{d.service_description}</p>
             <ArrowButton name={d.service_button_name} />

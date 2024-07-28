@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="w-[90%] flex flex-col gap-14">
+      <div className="w-full px-4 lg:w-[90%] flex flex-col gap-14">
         <OurClient />
         <WhatWeDoSection />
         <TechStack/>
