@@ -12,7 +12,6 @@ const global_font = Exo({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "CodeMonkey - Innovative Tech Solutions",
   description: "CodeMonkey is a dynamic tech startup specializing in the development of websites, web applications, and mobile applications for both Android and iOS. Additionally, CodeMonkey provides automation solutions tailored to enhance organizational efficiency.",
-  // viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
 };
 
@@ -26,7 +25,7 @@ export default function RootLayout({
       <head>
         <meta name="keywords" content="CodeMonkey, tech startup, web development, web applications, mobile applications, Android, iOS, automation solutions" />
         <meta name="author" content="CodeMonkey" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" /> */}
       </head>
       <body className={global_font.className}>
         <CustomCursor />
