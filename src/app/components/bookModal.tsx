@@ -298,13 +298,13 @@ const Modal = () => {
 
 
   return (
-      <div className="w-full h-auto flex items-center justify-center bg-[#d3d3d32a] py-6 mt-10">
-        <div className="h-[100%] w-[60%] bg-white rounded-lg drop-shadow-lg flex flex-col p-6 text-lg relative">
+      <div className="w-full h-auto flex items-center justify-center py-6 mt-10 mx-auto">
+        <div className="h-[100%] w-[85%] lg:w-[60%] bg-white rounded-lg flex flex-col p-6 text-lg relative">
           <p className="font-bold text-2xl mb-6 text-center">
             Book a meeting with us in few clicks
           </p>
           <form className="flex flex-col space-y-6">
-            <div className="flex space-x-4">
+            <div className="flex flex-col lg:flex-row lg:space-x-4 md:space-x-0">
               <label className="flex flex-col flex-1 text-gray-700 text-start">
                 <p className="px-2">Name:</p>
                 <input
@@ -326,7 +326,7 @@ const Modal = () => {
                 />
               </label>
             </div>
-            <div className="flex gap-4 w-full">
+            <div className="flex flex-col lg:flex-row gap-4 w-full">
               <label className="flex flex-col text-gray-700 w-full text-start">
                 <p className="px-2">Country:</p>
                 <Select
@@ -394,8 +394,8 @@ const Modal = () => {
               />
             </label>
           </form>
-          <div className="p-6 flex space-x-4 text-lg gap-2 justify-between">
-            <div>
+          <div className="pt-6 flex flex-col lg:flex-row space-x-0 lg:space-x-4 text-lg gap-2 justify-start lg:justify-between items-center">
+            <div className="hidden lg:block">
               <Link href="/">
               <button
                 className="border-2 border-black rounded-lg w-32 py-2 hover:bg-gray-200 transition-all"
@@ -404,11 +404,11 @@ const Modal = () => {
               </button>
               </Link>
             </div>
-            <div className="flex">
+            <div className="flex items-center">
               <button
                 type="submit"
                 onClick={handleSendWhatsapp}
-                className="border-2 mr-2 border-black rounded-lg px-3 py-2 bg-green-600 text-white hover:bg-gray-800 transition-all flex gap-2"
+                className="border-2 mr-2 items-center border-black rounded-lg px-3 py-2 green-button-gradient text-white hover:bg-gray-800 transition-all flex gap-2"
               >
                 <MdOutlineWhatsapp className="size-7" />
                 <p> Book via whatsapp</p>
@@ -416,13 +416,22 @@ const Modal = () => {
               <button
                 type="submit"
                 onClick={handleSendMail}
-                className="border-2 ml-2 border-black rounded-lg px-3 py-2 bg-black text-white hover:bg-gray-800 transition-all flex gap-2"
+                className="border-2 ml-2 items-center border-black rounded-lg px-3 py-2 blue-button-gradient text-white hover:bg-gray-800 transition-all flex gap-2"
               >
                 <MdOutlineMailOutline className="size-7" />
                 <p> Book via e-mail</p>
               </button>
             </div>
           </div>
+          <div className="block lg:hidden mt-5">
+              <Link href="/">
+              <button
+                className="border-2 border-black rounded-lg w-32 py-2 hover:bg-gray-200 transition-all"
+                >
+                Back
+              </button>
+              </Link>
+            </div>
         </div>
       </div>
   );
