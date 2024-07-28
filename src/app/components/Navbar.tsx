@@ -16,7 +16,7 @@ const Navbar = () => {
                 <figure className='w-auto h-14 pr-1 items-center cursor-pointer'>
                     <Image src="/LogoColor.png" 
                     alt='logo' 
-                    width={300} height={300} 
+                    width={100} height={100} 
                     className="object-cover w-full h-full"
                     />
                 </figure>
