@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import BookButton from "./components/bookButton";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -43,14 +44,14 @@ const Hero = () => {
             </header>
             <div className="pt-4 flex flex-col md:flex-row gap-4 text-lg font-semibold">
               <BookButton />
-              <button 
+              <Link href="#clients" 
               aria-label="learn about codemonkey"
               className="text-sky-300  py-3 hover:px-4 hover:bg-[#9191912f] transition-custom flex items-center gap-3">
                 <p className="light-blue-text-gradient">
                   learn about codemonkey
                 </p>
                 <FaArrowRight className="size-4" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

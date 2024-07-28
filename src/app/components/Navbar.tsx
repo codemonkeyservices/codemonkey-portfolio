@@ -13,11 +13,11 @@ const Navbar = () => {
     <div className='2xl:max-w-[1490px] mx-auto px-2'>
     <nav className='w-full flex justify-between'>
             <Link className="mr-2 relative flex items-center hover:scale-105 transition-all duration-1000" href="/">
-                <figure className='w-auto h-14 pr-1 items-center cursor-pointer'>
+                <figure className='w-auto h-14 items-center cursor-pointer'>
                     <Image src="/LogoColor.png" 
                     alt='logo' 
                     width={100} height={100} 
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full p-1"
                     />
                 </figure>
                 <p className='text-lg sm:text-xl font-extrabold pt-2'>CodeMonkey</p>
