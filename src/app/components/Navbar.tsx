@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 // import { PiSquaresFourLight, PiPuzzlePiece  } from "react-icons/pi";
 // import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 // import { RiContactsBook2Line } from "react-icons/ri";
@@ -13,13 +13,13 @@ const Navbar = () => {
     <div className='2xl:max-w-[1430px] mx-auto px-2'>
     <nav className='w-full flex justify-between py-2'>
             <Link className="mr-2 relative flex items-center" href="/">
-                {/* <div className='w-auto h-12 p-2 mt-2 items-center hover:scale-110 transition-all duration-500 cursor-pointer'>
-                    <Image src="/logo.png" 
+                <div className='w-auto h-16 p-2 mt-2 items-center hover:scale-110 transition-all duration-500 cursor-pointer'>
+                    <Image src="/LogoColor.png" 
                     alt='logo' 
                     width={300} height={300} 
                     className="object-cover w-full h-full"
                     />
-                </div> */}
+                </div>
                 <p className='text-lg sm:text-2xl font-extrabold '>CodeMonkey</p>
             </Link>
             <div className='flex'>
