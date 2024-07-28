@@ -27,7 +27,7 @@ const Footer = () => {
 
             <address className="flex justify-around md:justify-start gap-2 mb-10 md:mb-0 not-italic" aria-label="contact us options">
               <Link
-                href="mailto: codemonkeyservices@gmail.com"
+                href="mailto: services@codemonkey.co.in"
                 accessKey="m"
                 target="_blank"
                 className="py-2 md:pr-10 flex gap-2 items-center rounded-lg drop-shadow-lg hover:md:bg-gray-100 hover:md:px-6 transition-all duration-700"
@@ -180,14 +180,14 @@ const Footer = () => {
                 </Link>
                 <Link
                   className="mx-2"
-                  href="mailto: codemonkeyservices@gmail.com"
+                  href="mailto: services@codemonkey.co.in"
                   target="_blank"
                   aria-label="e-mail link"
                 >
                   <MdOutlineMailOutline className="size-10 opacity-40 hover:opacity-100 hover:scale-110 transition-all duration-200" />
                 </Link>
               </div>
-              <p>codemonkeyservices@gmail.com</p>
+              <p>services@codemonkey.co.in</p>
               <p>+91 9518542917</p>
             </address>
           </section>

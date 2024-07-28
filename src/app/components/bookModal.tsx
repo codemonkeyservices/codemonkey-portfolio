@@ -270,6 +270,9 @@ const Modal = () => {
   const [phone, setPhone] = useState<string | null>(null);
   const [budget, setBudget] = useState<string | null>("1000-5000");
   const [agenda, setAgenda] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(null);
+
+  const isFormValid = name && country && phone && budget && agenda && startDate;
 
 
   const handleChange = (selectedOption: any) => {
@@ -282,18 +285,26 @@ const Modal = () => {
 
   // Handle click to generate mailto URL and navigate
   const handleSendMail = () => {
+    if (!isFormValid) {
+      setError("Please fill all fields.");
+      return;}
     const validName = name || '' 
     const validCountry = country || '' 
     const validPhone = phone || '' 
     const validbudget = budget || '' 
-    const mailtoUrl = `mailto:services@codemonkey.co.in?subject=Meeting Request&body=Hey team Codemonkey,%0A%0Asome content to ask for a meeting%0A%0AName: ${encodeURIComponent(validName)}%0ACountry: ${encodeURIComponent(validCountry)}%0APhone: ${encodeURIComponent(validPhone)}%0ABudget: ${encodeURIComponent(validbudget)}`;
+    const mailtoUrl = `mailto:services@codemonkey.co.in?subject=Meeting Request&body=Hey team Codemonkey,%0A%0A${agenda}%0A%0AName: ${encodeURIComponent(validName)}%0ACountry: ${encodeURIComponent(validCountry)}%0APhone: ${encodeURIComponent(validPhone)}%0ABudget: ${encodeURIComponent(validbudget)}`;
 
     window.location.href = mailtoUrl; //Opens the default email client
     
   };
 
+  
+
   const handleSendWhatsapp = () => {
-    const message = `Hey team Codemonkey,\n\nsome content to ask for a meeting\n\nName: ${name}\nCountry: ${country}\nPhone: ${phone}\nBudget: ${budget}`;
+    if (!isFormValid) {
+      setError("Please fill all fields.");
+      return;}
+    const message = `Hey team Codemonkey,\n\n${agenda}\n\nName: ${name}\nCountry: ${country}\nPhone: ${phone}\nBudget: ${budget}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://api.whatsapp.com/send?phone=919518542917&text=${encodedMessage}`;
 
@@ -397,22 +408,21 @@ const Modal = () => {
                 onChange={(e) => setAgenda(e.target.value)}
               />
             </label>
-          </form>
-          <div className="pt-6 flex flex-col lg:flex-row space-x-0 lg:space-x-4 text-lg gap-2 justify-start lg:justify-between items-center">
+            <div className="pt-6 flex flex-col lg:flex-row space-x-0 lg:space-x-4 text-lg gap-2 justify-between items-center">
             <div className="hidden lg:block">
               <Link href="/">
               <button
-                className="border-2 border-black rounded-lg w-32 py-2 hover:bg-gray-200 transition-all"
+                className="border-2 border-black rounded-lg w-32 px-4 py-4 hover:bg-gray-200 transition-all"
                 >
                 Back
               </button>
               </Link>
             </div>
-            <div className="flex items-center">
+            <div className="w-full lg:w-auto flex flex-col lg:flex-row items-center">
               <button
                 type="submit"
                 onClick={handleSendWhatsapp}
-                className="border-2 mr-2 items-center border-black rounded-lg px-3 py-2 green-button-gradient text-white hover:bg-gray-800 transition-all flex gap-2"
+                className="border-2 justify-center w-full lg:w-auto lg:mr-2 items-center font-semibold drop-shadow-md border-green-600 rounded-lg px-4 py-4 green-button-gradient text-white hover:bg-gray-800 transition-all flex gap-2"
               >
                 <MdOutlineWhatsapp className="size-7" />
                 <p> Book via whatsapp</p>
@@ -420,13 +430,15 @@ const Modal = () => {
               <button
                 type="submit"
                 onClick={handleSendMail}
-                className="border-2 ml-2 items-center border-black rounded-lg px-3 py-2 blue-button-gradient text-white hover:bg-gray-800 transition-all flex gap-2"
+                className="border-2 justify-center w-full lg:w-auto mt-4 lg:mt-0 lg:ml-2 items-center font-semibold drop-shadow-md border-purple-700 rounded-lg px-4 py-4 blue-Bookbutton-gradient text-white hover:bg-gray-800 transition-all flex gap-2"
               >
                 <MdOutlineMailOutline className="size-7" />
                 <p> Book via e-mail</p>
               </button>
             </div>
           </div>
+          </form>
+          
         </div>
       </div>
   );

@@ -36,11 +36,8 @@ const Hero = () => {
               Turning Your Vision into a Stunning Online Reality
             </h1>
             <h2 className="text-sm md:text-base font-medium text-white" aria-label="company discription">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
-              veniam omnis facilis pariatur explicabo eaque perspiciatis
-              voluptates. Nostrum aliquid molestias sapiente voluptatem saepe
-              deleniti, necessitatibus adipisci{" "}
-            </h2>
+
+            Elevate your digital presence with CodeMonkey. We specialize in innovative websites, web apps, and mobile apps for Android and iOS, plus automation solutions that boost efficiency. Partner with us to transform your vision into impactful, real-world results.            </h2>
             </header>
             <div className="pt-4 flex flex-col md:flex-row gap-4 text-lg font-semibold">
               <BookButton />

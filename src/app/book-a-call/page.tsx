@@ -1,5 +1,5 @@
 import React from 'react'
-import BookModal from '@/src/app/components/BookModal'
+import BookModal from '@/src/app/components/bookModal'
 
 const bookACall = () => {
   return (

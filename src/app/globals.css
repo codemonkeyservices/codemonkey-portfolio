@@ -59,13 +59,24 @@
 
 .green-button-gradient {
   background: rgb(0, 142, 255);
-  background: linear-gradient(47deg, rgb(0, 255, 42) 0%, rgb(3, 148, 42) 0%, rgb(8, 129, 42) 50%, rgb(26, 97, 38) 100%);
+  background: linear-gradient(47deg, rgb(22, 255, 61) 0%, rgb(14, 173, 57) 0%, rgb(16, 158, 57) 50%, rgb(41, 141, 58) 100%);
   transition: background 0.4s ease; /* Optional: adds a smooth transition effect */
 }
 
 .green-button-gradient:hover {
   background: rgb(0, 142, 255);
   background: linear-gradient(47deg, rgb(43, 243, 76) 0%, rgb(16, 173, 58) 0%, rgb(14, 145, 51) 50%, rgb(36, 121, 50) 100%);
+}
+
+.blue-Bookbutton-gradient {
+  background: rgb(0, 142, 255);
+  background: linear-gradient(47deg, rgb(40, 155, 250) 0%, rgb(40, 29, 196) 0%, rgb(38, 24, 187) 50%, rgb(64, 44, 148) 100%);
+  transition: background 0.4s ease; /* Optional: adds a smooth transition effect */
+}
+
+.blue-Bookbutton-gradient:hover {
+  background: rgb(0, 142, 255);
+  background: linear-gradient(47deg, rgb(35, 156, 255) 0%, rgb(18, 6, 182) 0%, rgb(17, 3, 168) 50%, rgb(31, 16, 92) 100%);
 }
 
 .breathing {
