@@ -8,10 +8,10 @@ const Hero = () => {
   return (
     <section className="relative w-full h-[800px] min-[1600px]:h-screen">
       <div className="hero-bottom-wave fill-transparent-to-white  absolute inset-0 w-full h-full bg-blue-600 ">
-        <Image
+        <img
           src="/hero-bg-planet.svg"
           alt="hero background image"
-          priority
+          // priority
           width={800}
           height={800}
           className="object-cover object-bottom w-full h-full"

@@ -51,7 +51,7 @@ const Footer = () => {
             </address>
           </div>
           <figure className="hidden md:block w-[40%] lg:w-[45%] h-[500px] mb-1">
-            <Image
+            <img
               src="/gorillafooter.png"
               alt="gorilla image"
               width={400}
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <footer className="w-full">
           <figure className="relative">
-            <Image
+            <img
               src="/wave-mask-salmon-top.svg"
               alt="wave-salmon"
               width={200}
@@ -74,7 +74,7 @@ const Footer = () => {
                 top: -10,
               }}
             />
-            <Image
+            <img
               src="/wave-mask-purple-top.svg"
               alt="wave-purple"
               width={200}
@@ -87,7 +87,7 @@ const Footer = () => {
                 bottom: 0,
               }}
             />
-            <Image
+            <img
               src="/wave-mask-space-top.svg"
               alt="wave-top"
               width={300}
@@ -99,7 +99,7 @@ const Footer = () => {
               }}
             />
             <figure className="w-full h-auto">
-              <Image
+              <img
                 src="/wave-mask-space-top.svg"
                 alt="wave-space"
                 width={1}
@@ -116,7 +116,7 @@ const Footer = () => {
             <section className="flex flex-col" aria-label="codemonkey company details">
               <div>
                 <div className="w-40 h-40 p-4 mb-1">
-                  <Image
+                  <img
                     src="/LogoColor.png"
                     alt="codemonkey logo"
                     width={200}

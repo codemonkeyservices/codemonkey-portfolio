@@ -14,7 +14,7 @@ export default function Services() {
           aria-label={`about ${d.service_name} service`}
         >
           <figure className="h-auto lg:h-[530px] w-[80%] lg:w-[630px]">
-            <Image
+            <img
               src={d.service_img}
               alt={d.service_name}
               width={400}
@@ -55,7 +55,7 @@ export default function Services() {
 const serviceData = [
   {
     service_name: "Web Development",
-    service_img: "/webdev.svg",
+    service_img: "/webDev.svg",
     service_img_fit: "cover",
     service_description:
       "We develop all kinds of websites and web apps, including complex features like e-commerce, interactive graphs, chat systems, and more.",

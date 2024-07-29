@@ -11,7 +11,7 @@ export default function OurClient() {
       <div className="hidden md:flex flex-wrap justify-around gap-3 md:gap-5">
         {data.map((d, index) => (
           <figure className="p-3 md:p-5 h-10 md:h-16" key={index} aria-label={`client ${d.name}`}>
-            <Image
+            <img
               src={d.image}
               alt={d.name}
               width={200}
@@ -26,7 +26,7 @@ export default function OurClient() {
         <div className="w-[420%] min-[400px]:w-[300%] flex">
           <figure className="flex justify-around w-full slide-animation-right" >
             {data.map((d) => (
-              <Image
+              <img
                 src={d.image}
                 alt={d.name}
                 width={80}
@@ -39,7 +39,7 @@ export default function OurClient() {
           </figure>
           <figure className="flex justify-around w-full gap-3 slide-animation-right">
             {data.map((d) => (
-              <Image
+              <img
                 src={d.image}
                 alt={d.name}
                 width={80}
