@@ -59,11 +59,11 @@ export default function OurClient() {
 const data = [
   {
     name: "OLA",
-    image: "/ola.png",
+    image: "/maersk.svg",
   },
   {
     name: "OneShield",
-    image: "/oneshield.png",
+    image: "/aspen.png",
   },
   {
     name: "bnbIndia",
@@ -71,7 +71,7 @@ const data = [
   },
   {
     name: "Bankai",
-    image: "/Bankai.png",
+    image: "/virgin-hotels.svg",
   },
   {
     name: "Zedge",

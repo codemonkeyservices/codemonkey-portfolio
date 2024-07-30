@@ -72,14 +72,14 @@ const serviceData = [
   {
     service_name: "iOS Development",
     service_img: "/webdevelopment/ios.png",
-    service_img_fit: "cover",
+    service_img_fit: "contain",
     service_description:
       "We develop high-quality iOS applications that enhance user engagement and support business objectives, ensuring a seamless experience for clients.",
   },
   {
     service_name: "E-Commerce Platform",
     service_img: "/webdevelopment/ecommerce.svg",
-    service_img_fit: "cover",
+    service_img_fit: "contain",
     service_description:
       "We build robust e-commerce platforms that drive sales and enhance user experience, helping clients boost their online business.",
   },
