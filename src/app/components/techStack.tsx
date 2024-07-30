@@ -38,7 +38,7 @@ export default function TechStack() {
                     {tech.name}
                   </figcaption>
                   <figure className="w-6 h-6 xl:w-11 xl:h-11">
-                    <img
+                    <Image
                       src={tech.icon}
                       alt='tech icon'
                       width={50}
@@ -57,7 +57,7 @@ export default function TechStack() {
         <div className="w-[900%] flex">
           <figure className="flex justify-around w-full slide-animation-right">
             {TechData.map((d) => (
-              <img
+              <Image
                 src={d.icon}
                 alt='techn icon'
                 width={40}
@@ -70,7 +70,7 @@ export default function TechStack() {
           </figure>
           <figure className="flex justify-around w-full gap-3 slide-animation-right">
             {TechData.map((d) => (
-              <img
+              <Image
                 src={d.icon}
                 alt='techn icon'
                 width={40}
@@ -87,7 +87,7 @@ export default function TechStack() {
           <div className="h-14 w-[900%] flex">
             <figure className="flex justify-around w-full slide-animation-left">
               {[...TechData].reverse().map((d) => (
-                <img
+                <Image
                   src={d.icon}
                   alt='techn icon'
                   width={40}
@@ -100,7 +100,7 @@ export default function TechStack() {
             </figure>
             <figure className="flex justify-around w-full gap-3 slide-animation-left">
               {[...TechData].reverse().map((d) => (
-                <img
+                <Image
                   src={d.icon}
                   alt='techn icon'
                   width={40}

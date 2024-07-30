@@ -15,7 +15,7 @@ export default function webdevelopment() {
           aria-label={`${d.service_name} service discription`}
         >
           <figure className="h-auto lg:h-[530px] w-[80%] lg:w-[630px]">
-            <img
+            <Image
               src={d.service_img}
               alt={d.service_name}
               width={400}

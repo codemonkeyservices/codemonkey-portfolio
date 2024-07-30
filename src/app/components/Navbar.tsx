@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className='w-full flex justify-between'>
             <Link className="mr-2 relative flex items-center hover:scale-105 transition-all duration-1000" href="/">
                 <figure className='w-auto h-14 items-center cursor-pointer'>
-                    <img src="/LogoColor.png" 
+                    <Image src="/LogoColor.png" 
                     alt='logo' 
                     width={100} height={100} 
                     className="object-cover w-full h-full p-1"

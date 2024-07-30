@@ -15,7 +15,7 @@ export default function AppDevelopment() {
           aria-label={`${d.service_name} service discription`}
         >
           <figure className="h-auto lg:h-[530px] w-[80%] lg:w-[630px]">
-            <img
+            <Image
               src={d.service_img}
               alt={d.service_name}
               width={400}
@@ -71,7 +71,7 @@ const serviceData = [
   },
   {
     service_name: "iOS Development",
-    service_img: "/webdevelopment/ios.png",
+    service_img: "/webdevelopment/IOS.png",
     service_img_fit: "cover",
     service_description:
       "We develop high-quality iOS applications that enhance user engagement and support business objectives, ensuring a seamless experience for clients.",
