@@ -135,15 +135,21 @@ const Footer = () => {
             </section>
             <nav className="flex flex-col  gap-1 font-sans">
               <h2 className="my-3 font-semibold text-lg">Company</h2>
-              <p className="hover:font-semibold transition-all duration-200">
-                get to know us
-              </p>
-              <p className="hover:font-semibold transition-all duration-200">
-                check our Projects
-              </p>
-              <p className="hover:font-semibold transition-all duration-200">
-                inquire about Services
-              </p>
+              <Link href="#clients">
+                <p className="hover:font-semibold transition-all duration-200">
+                  get to know us
+                </p>
+              </Link>
+              <Link href="#clients">
+                <p className="hover:font-semibold transition-all duration-200">
+                  check our Projects
+                </p>
+              </Link>
+              <Link href="/book-a-call">
+                <p className="hover:font-semibold transition-all duration-200">
+                  inquire about Services
+                </p>
+              </Link>
               <p className="hover:font-semibold transition-all duration-200">
                 read blogs
               </p>

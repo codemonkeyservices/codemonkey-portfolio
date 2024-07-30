@@ -16,7 +16,7 @@ const Hero = () => {
           height={800}
           className="object-cover object-bottom w-full h-full"
         />
-        <div className="h-full w-full absolute inset-0 flex justify-center">
+        <div className="h-full w-full px-2 absolute inset-0 flex justify-center">
           <div className=" flex flex-col pt-20 items-center gap-4 text-center px-2 md:px-0 md:w-[80%] lg:max-w-[1000px]">
             <button 
             aria-label="CodeMonkey announces new month and yearly plans"
@@ -32,10 +32,10 @@ const Hero = () => {
               </div>
             </button>
             <header>
-            <h1 className="text-3xl md:text-6xl font-extrabold text-yellow-300 leading-tight" aria-label="codemonkey tagline">
+            <h1 className="text-3xl md:text-6xl sm:pt-5 font-extrabold text-yellow-300 leading-tight" aria-label="codemonkey tagline">
               Turning Your Vision into a Stunning Online Reality
             </h1>
-            <h2 className="text-sm md:text-base font-medium text-white" aria-label="company discription">
+            <h2 className="text-sm md:text-base font-medium text-white pt-10" aria-label="company discription">
 
             Elevate your digital presence with CodeMonkey. We specialize in innovative websites, web apps, and mobile apps for Android and iOS, plus automation solutions that boost efficiency. Partner with us to transform your vision into impactful, real-world results.            </h2>
             </header>

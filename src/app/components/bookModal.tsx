@@ -314,7 +314,7 @@ const Modal = () => {
 
   return (
       <div className="w-full h-auto flex items-center justify-center py-6 mt-10 mx-auto">
-        <div className="h-[100%] w-[85%] lg:w-[60%] bg-slate-50 drop-shadow-md rounded-lg flex flex-col p-6 text-lg relative">
+        <div className="h-[100%] w-[85%] xl:lg:w-[65%] bg-slate-50 drop-shadow-md rounded-lg flex flex-col p-6 text-lg relative">
           <p className="font-bold text-4xl mb-16 text-center">
             Book a meeting with us in few clicks
           </p>
